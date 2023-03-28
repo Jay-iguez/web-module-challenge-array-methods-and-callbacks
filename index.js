@@ -9,14 +9,25 @@ Practice accessing data by console.log-ing the following pieces of data note.
 
 //(a) Home Team name for 2014 world cup final
 
+const filterArray = fifaData.filter((game) => {
+    return game.Year === 2014 && game.Stage === "Final"
+})
+
+console.log(`ARRAY`, filterArray)
+
+console.log(`Task 1: a`, filterArray[0][`Home Team Name`])
+
 //(b) Away Team name for 2014 world cup final
+console.log(`Task 1: b`, filterArray[0][`Away Team Name`])
 
 //(c) Home Team goals for 2014 world cup final
+console.log(`Task 1: c`, filterArray[0][`Home Team Goals`])
 
 //(d) Away Team goals for 2014 world cup final
+console.log(`Task 1: d`, filterArray[0][`Away Team Goals`])
 
 //(e) Winner of 2014 world cup final */
-
+console.log(`Task 1: e`, filterArray[0][`Win conditions`])
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
