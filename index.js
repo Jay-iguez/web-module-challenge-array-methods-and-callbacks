@@ -55,9 +55,17 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function as the second parameter that will take getFinals from task 2 as an argument
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(array, cb) {
+    const filtered = cb(array)
+    const years = []
+    filtered.map((game) => {
+        return years.push(game.Year)
+    })
+    
+    return years
 }
+
+console.log(`Task 3:`, getYears(fifaData, getFinals))
 
 
 
